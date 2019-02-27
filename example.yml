@@ -1,0 +1,30 @@
+%YAML 1.1
+---
+# datatei25.cachetags
+-
+  tag: "green"
+  invalidations: 118
+-
+  tag: "yellow"
+  invalidations: 2
+-
+  tag: "blue"
+  invalidations: 8
+# datatei25.personaltable
+-
+  ID: "4xx-response"
+  tag1: 118
+  tag2 : 002
+-
+  ID: "4xx-response"
+  tag1: 200
+  tag2 : 005
+# datatei25.publictable
+-
+  ID: "4xx-response"
+  isok : false
+  comment : "# not in my world"
+-
+  ID: "4xx-response"
+  isok: true
+  comment : "#yolo"
