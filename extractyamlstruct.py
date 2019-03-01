@@ -60,13 +60,19 @@ with open(args.input,'r') as stream:
                     temp.write(line)
 
 ## Second step is to transform the YAML file to a csv
-print("2- Transformation to csv")
+print("2- Loading yaml file")
 with open("text.txt",'r') as stream:
     data = yaml.load(stream)
     if data is not None:
-        for x in data:
-            with open(x+".csv",'w') as file:
-                print(list(data[x][0].keys()),file=file)
+        print("3- Transformation to csv")
+        if tqdmimport:
+            for x in tqdm(data):
+                with open(x+".csv",'w') as file:
+                    print(list(data[x][0].keys()),file=file)
+        else:
+            for x in data:
+                with open(x+".csv",'w') as file:
+                    print(list(data[x][0].keys()),file=file)
     else:
         print("Enable to perform the parsing of the yaml file")
 
